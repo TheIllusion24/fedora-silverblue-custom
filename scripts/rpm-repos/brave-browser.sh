@@ -21,6 +21,8 @@ EOF
 
 rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
+mv /usr/share/applications/brave-browser.desktop /usr/share/applications/brave-browser.desktop.bak
+
 rpm-ostree install brave-browser
 
 rm /etc/yum.repos.d/brave-browser.repo -f
@@ -29,7 +31,7 @@ rm /etc/pki/rpm-gpg/RPM-GPG-KEY-brave*
 
 mv /var/opt/brave.com /usr/lib/brave.com
 
-sed -i 's/brave-browser-stable/brave/' /usr/share/applications/brave-browser.desktop
+mv /usr/share/applications/brave-browser.desktop.bak /usr/share/applications/brave-browser.desktop
 
 # We do this via tmpfiles.d so that it is created by the live system.
 cat >/usr/lib/tmpfiles.d/brave-browser.conf <<EOF
