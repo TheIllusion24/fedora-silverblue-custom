@@ -4,7 +4,7 @@ env:
   NAME: "${{ github.event.repository.name }}"
   SOURCE_IMAGE: "silverblue"
   SOURCE_SUFFIX: "-main"
-  SOURCE_TAG: "40"
+  SOURCE_TAG: "latest"
   SOURCE_ORG: "ublue-os"
   SOURCE_REGISTRY: "ghcr.io"
   REGISTRY: "ghcr.io/${{ github.repository_owner }}"

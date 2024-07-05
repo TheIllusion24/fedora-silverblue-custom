@@ -1,6 +1,6 @@
 ARG SOURCE_IMAGE="silverblue"
 ARG SOURCE_SUFFIX="-main"
-ARG SOURCE_TAG="40"
+ARG SOURCE_TAG="latest"
 ARG SOURCE_ORG="ublue-os"
 ARG SOURCE_REGISTRY="ghcr.io"
 
