@@ -6,6 +6,7 @@ env:
   SOURCE_SUFFIX: "-main"
   SOURCE_TAG: "40"
   SOURCE_ORG: "ublue-os"
+  SOURCE_OWNER: "${{ github.repository_owner }}"
   SOURCE_REGISTRY: "ghcr.io"
 
 on:
@@ -114,7 +115,7 @@ jobs:
         id: registry_case
         uses: ASzc/change-string-case-action@v6
         with:
-          string: ${{ env.SOURCE_REGISTRY }}/${{ env.REPO_NAME }}
+          string: ${{ env.SOURCE_REGISTRY }}/${{ env.SOURCE_OWNER }}
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
