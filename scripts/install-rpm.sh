@@ -6,6 +6,7 @@ rpm-ostree install \
     firewall-config \
     gnome-themes-extra \
     lm_sensors \
+    neovim \
     setools \
     setroubleshoot \
     usbguard \
