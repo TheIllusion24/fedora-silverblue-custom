@@ -11,6 +11,6 @@ COPY files/usr /usr
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/scripts/misc.sh && \
-    /tmp/scripts/rpm-scripts.sh && \
+    /tmp/scripts/rpm.sh && \
     /tmp/scripts/systemd.sh && \
     ostree container commit
