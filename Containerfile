@@ -10,7 +10,7 @@ COPY scripts/ /tmp/scripts
 COPY files/usr /usr
 
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/scripts/fix-file-permission.sh && \
+    /tmp/scripts/misc.sh && \
     /tmp/scripts/rpm-scripts.sh && \
     /tmp/scripts/systemd.sh && \
     ostree container commit
