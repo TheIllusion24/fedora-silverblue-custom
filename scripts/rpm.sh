@@ -2,6 +2,6 @@
 
 set -euox pipefail
 
-for f in /tmp/scripts/rpm-scripts/*.sh; do
+for f in /tmp/scripts/rpm/*.sh; do
   bash "$f"
 done
