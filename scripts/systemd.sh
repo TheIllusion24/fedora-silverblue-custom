@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for f in ./systemd/*.sh; do
+for f in /tmp/scripts/systemd/*.sh; do
   bash "$f"
 done
 
