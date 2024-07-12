@@ -11,4 +11,4 @@ echo '
 
 CHROMIUM_FLAGS+=" --ozone-platform-hint=auto --no-pings --disk-cache-dir=/dev/null --extension-content-verification=enforce_strict --extensions-install-verification=enforce_strict --disable-features=PrivacySandboxSettings4,InterestFeedV2,NTPPopularSitesBakedInContent,UsePopularSitesSuggestions,MediaDrmPreprovisioning,AutofillServerCommunication,DisableThirdPartyStoragePartitioningDeprecationTrial,OptimizationHints,OptimizationHintsFetching,OptimizationHintsFetchingAnonymousDataConsent --enable-gpu-rasterization --enable-zero-copy --video-capture-use-gpu-memory-buffer"
 
-' >> /etc/chromium/chromium.conf
+' >> /usr/etc/chromium/chromium.conf
