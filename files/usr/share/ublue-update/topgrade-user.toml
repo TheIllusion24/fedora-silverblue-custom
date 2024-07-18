@@ -1,0 +1,13 @@
+[misc]
+only = ["distrobox", "brew_formula"]
+ignore_failures = ["distrobox", "brew_formula"]
+skip_notify = true
+assume_yes = true
+no_retry = true
+no_self_update = true
+
+[distrobox]
+use_root = false
+
+[flatpak]
+use_sudo = false
