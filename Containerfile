@@ -6,7 +6,7 @@ ARG SOURCE_REGISTRY="ghcr.io"
 
 FROM ${SOURCE_REGISTRY}/${SOURCE_ORG}/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
-COPY --from=ghcr.io/ublue-os/ublue-update:latest /rpms/ublue-update.noarch.rpm /tmp/rpms/
+COPY --from=ghcr.io/ublue-os/ublue-update:39 /rpms/ublue-update.noarch.rpm /tmp/rpms/
 
 COPY scripts/ /tmp/scripts
 COPY files/usr /usr
