@@ -60,14 +60,9 @@ setup-usbguard:
     #!/usr/bin/pkexec /usr/bin/bash
     echo "Notice: This will generate a policy based on your existing connected USB devices."
     sudo mkdir -p /var/log/usbguard
-    sudo mkdir -p /etc/usbguard
-    sudo chmod 755 /etc/usbguard
     sudo sh -c 'usbguard generate-policy > /etc/usbguard/rules.conf'
-    sudo systemctl enable --now usbguard.service
     sudo systemctl enable --now usbguard-dbus.service
-    sudo usbguard add-user $(whoami)
-    systemctl enable --user --now usbguard-notifier.service
     if command -v gsettings &> /dev/null; then
-        gsettings set org.gnome.desktop.privacy usb-protection-level always
+        gsettings set org.gnome.desktop.privacy usb-protection-level lockscreen
         gsettings set org.gnome.desktop.privacy usb-protection true
     fi
