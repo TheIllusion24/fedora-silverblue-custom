@@ -5,6 +5,7 @@ set -ouex pipefail
 rpm-ostree install \
     firewall-config \
     gnome-themes-extra \
+    hardened-chromium \
     lm_sensors \
     setools \
     setroubleshoot \
