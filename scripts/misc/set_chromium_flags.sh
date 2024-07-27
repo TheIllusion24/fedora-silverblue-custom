@@ -8,5 +8,5 @@ sed -i '/--enable-chrome-browser-cloud-management/d' /etc/chromium/chromium.conf
 sed -i 's/FEATURES=""/FEATURES="WebRTCPipeWireCapturer,TouchpadOverscrollHistoryNavigation,"/g' /etc/chromium/chromium.conf
 
 echo '
-CHROMIUM_FLAGS+="--no-pings --disk-cache-dir=/dev/null --video-capture-use-gpu-memory-buffer"
+CHROMIUM_FLAGS+=" --no-pings --disk-cache-dir=/dev/null --video-capture-use-gpu-memory-buffer"
 ' >> /etc/chromium/chromium.conf
