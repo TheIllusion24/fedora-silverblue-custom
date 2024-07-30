@@ -67,3 +67,8 @@ setup-usbguard:
         gsettings set org.gnome.desktop.privacy usb-protection-level lockscreen
         gsettings set org.gnome.desktop.privacy usb-protection true
     fi
+
+# Harden flatpaks by preloading hardened_malloc
+harden-flatpak:
+    #!/usr/bin/bash
+    flatpak override --user --filesystem=host-os:ro --env=LD_PRELOAD=/var/run/host/usr/lib64/libhardened_malloc.so
