@@ -19,6 +19,7 @@ set-kargs-hardening:
           --append-if-missing="lockdown=confidentiality" \
           --append-if-missing="pti=on" \
           --append-if-missing="module.sig_enforce=1" \
+          --append-if-missing="mitigations=auto,nosmt" \
     echo "Hardening kargs set."
 
 # Remove all hardening boot parameters (requires reboot)
@@ -42,6 +43,8 @@ remove-kargs-hardening:
           --delete-if-present="lockdown=confidentiality" \
           --delete-if-present="pti=on" \
           --delete-if-present="module.sig_enforce=1" \
+          --delete-if-present="mitigations=auto,nosmt" \
+    echo "Hardening kargs removed."
 
 # Enable discard/trim support and disable read and write workqueue on encrypted drive
 optimize-crypt:
