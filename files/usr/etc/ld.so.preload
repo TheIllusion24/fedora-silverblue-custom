@@ -1,1 +1,1 @@
-libhardened_malloc.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/libhardened_malloc.so
