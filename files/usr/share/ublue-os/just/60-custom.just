@@ -70,17 +70,3 @@ setup-usbguard:
         gsettings set org.gnome.desktop.privacy usb-protection-level lockscreen
         gsettings set org.gnome.desktop.privacy usb-protection true
     fi
-
-# Harden flatpaks by preloading hardened_malloc (highest supported hwcap)
-harden-flatpak:
-    #!/usr/bin/bash
-    flatpak override --user --filesystem=host-os:ro
-    uarches="$(/usr/lib64/ld-linux-x86-64.so.2 --help | grep '(supported, searched)' | cut -d'v' -f2)"
-    bestuarch="${uarches:0:1}"
-    if [ -z "$bestuarch" ] ; then
-        echo "No microarchitecture support detected. Using default x86-64-v1 architecture."
-        flatpak override --user --env=LD_PRELOAD=/var/run/host/usr/lib64/libhardened_malloc.so
-    else
-        echo "x86-64-v$bestuarch support detected. Using x86-64-v$bestuarch microarchitecture."
-        flatpak override --user --env=LD_PRELOAD=/var/run/host/usr/lib64/glibc-hwcaps/x86-64-v"$bestuarch"/libhardened_malloc.so
-    fi
