@@ -139,7 +139,7 @@ jobs:
           extra-args: |
             --disable-content-trust
 
-      - uses: sigstore/cosign-installer@v3.5.0
+      - uses: sigstore/cosign-installer@v3.6.0
 
       - name: Sign container image
         run: |
