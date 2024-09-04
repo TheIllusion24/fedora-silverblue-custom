@@ -8,6 +8,7 @@ FROM ${SOURCE_REGISTRY}/${SOURCE_ORG}/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_T
 
 COPY scripts/ /tmp/scripts
 COPY files/usr /usr
+COPY files/etc /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/scripts/exec-all.sh && \
