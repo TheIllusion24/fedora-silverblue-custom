@@ -2,4 +2,4 @@
 
 set -ouex pipefail
 
-chmod 440 /usr/etc/sudoers.d/*
+chmod 440 /etc/sudoers.d/*
