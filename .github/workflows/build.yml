@@ -114,7 +114,7 @@ jobs:
         id: registry_case
         uses: ASzc/change-string-case-action@v6
         with:
-          string: ${{ env.SOURCE_REGISTRY }}/${{ env.SOURCE_OWNER }}
+          string: ghcr.io/${{ env.SOURCE_OWNER }}
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
