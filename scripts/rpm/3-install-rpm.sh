@@ -3,9 +3,7 @@
 set -ouex pipefail
 
 rpm-ostree install \
-    firewall-config \
     gnome-themes-extra \
     lm_sensors \
     setools \
-    setroubleshoot \
     wl-clipboard
