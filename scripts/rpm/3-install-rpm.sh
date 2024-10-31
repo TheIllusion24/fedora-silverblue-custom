@@ -8,6 +8,4 @@ rpm-ostree install \
     lm_sensors \
     setools \
     setroubleshoot \
-    usbguard \
-    usbguard-dbus \
     wl-clipboard
